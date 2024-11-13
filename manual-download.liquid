@@ -1,0 +1,965 @@
+
+    
+    <!-- Font Awesome CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-+kOkepX+dF6Xr6a0/THoUjI7I/N7/i63mI1aKPgfH4xikgrm/Uc+hn1pbnBd0qqV" crossorigin="anonymous" />
+
+
+    <!-- Style -->
+     <style>
+
+
+    /* Template Custom CSS */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            outline: none;
+            color: inherit;
+            text-decoration: none;
+            transition: .3s;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+            -webkit-transition: all 0.4s ease-out 0s;
+            transition: all 0.4s ease-out 0s;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a,
+        button,
+        i {
+        text-decoration: none;
+        color: inherit;
+        }
+
+        a:focus,
+        a:hover {
+        text-decoration: none;
+        color: inherit;
+        }
+
+    .nav-link:focus, .nav-link:hover {
+        color: #fff;
+    }
+    .tabs-dropdown-wrap .menu-sub-title {
+        display: none;
+    }
+       span.toggle-submenu {
+    display: block;
+    width: 100%;
+}
+    /* Comparative Products CSS */
+    .multitab-sections {
+        background: #fff;
+        padding: 40px 0px 40px 0px;
+    }
+    .row.multitab-bg {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 16px;
+        padding: 45px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .multitab-right-section {
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px 30px 30px 40px;
+    }
+    .multitab-right-section h2 {
+        font-size: 52px;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+    }
+    .multitab-right-section h4 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .multitab-wrap .multi-main-tabs {
+        background: none;
+        border: none;
+        padding: 0;
+    }
+    .multitab-wrap .multi-main-tabs ul li{
+        position: relative;
+        border: none;
+    }
+    .multitab-wrap .multi-main-tabs ul {
+        padding: 0;
+        margin: 0;
+        border: none;
+        gap: 40px;
+    }
+    .multitab-wrap .card {
+        border: none;
+    }
+    .multitab-wrap .multi-main-tabs ul li.nav-item a.nav-link {
+        padding: 0;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        color: #555558;
+    }
+    .multitab-wrap .multi-main-tabs ul li.nav-item a.nav-link.active::before {
+        position: absolute;
+        content: '';
+        background-color: rgba(255, 168, 0, 1);
+        width: 19px;
+        height: 19px;
+        left: 0px;
+        top: 0px;
+        border-radius: 50px;
+        z-index: 1;
+    }
+    .multitab-wrap .multi-main-tabs ul li.nav-item a.nav-link img {
+      transform: translateY(-3px);
+      margin-right: 8px;
+    }
+    .tabs-menu h4 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #19191C;
+
+    }
+    .tabs-menu {
+      border-radius: 20px;
+      border: 1px solid #EDEDFD;
+      background: #FFF;
+      box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.05);
+      padding: 20px 15px 10px 24px;
+      margin-top: 20px;
+    }
+    .tabs-menu ul li {
+      padding: 0;
+      margin: 0;
+      border: none;
+      position: relative;
+    }
+    .tabs-menu ul {
+      padding: 0;
+      margin: 0;
+      border: none;
+      gap: 40px;
+      margin-top: 15px;
+    }
+    .tabs-wrap .tabs-menu ul li a.nav-link {
+      border: none !important;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 32px;
+      padding: 0px 0px;
+      color: #19191C;
+    }
+    .tabs-wrap .tabs-menu ul li a.nav-link.active{
+      color: #19191C;
+    }
+    
+.tabs-menu ul li a.nav-link.active::after {
+    position: absolute;
+    content: '';
+    background: #FFA800;
+    height: 4px;
+    bottom: -10px;
+    width: 100%;
+    left: 0;
+  }
+  .tabs-dropdown-wrap {
+    width: 100%;
+    transition: all 0.3s ease-out 0s;
+    text-align: left;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid #EDEDFD;
+    border-top: none;
+    box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.05);
+    padding: 50px 0px 15px 20px;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    direction: rtl; 
+    scrollbar-width: thin;
+    scrollbar-color: #FFA800 #f1f1f1;
+  }
+
+  .tabs-dropdown-wrap::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .tabs-dropdown-wrap::-webkit-scrollbar-thumb {
+    background-color: #FFA800;
+    border-radius: 4px;
+  }
+
+  .tabs-dropdown-wrap::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  .tabs-dropdown-wrap li a {
+    padding: 8px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .tabs-dropdown-wrap li:last-child{
+    margin-bottom: 10px;
+  }
+  .tabs-dropdown-wrap li:hover {
+     background: #FFA800;
+  }
+  .tabs-dropdown-wrap li{
+    cursor: pointer;
+    position: relative;
+  }
+.tabs-dropdown-wrap ul li.menu-item-has-children:hover > .sub-tabs-dropdown-wrap {
+    opacity: 1;
+    visibility: visible;
+}
+.menu-item-has-children:hover > .sub-tabs-dropdown-wrap {
+    display: block; 
+}
+.wrapper {
+  position: relative;
+}
+
+/* li .wrapper {
+  position: absolute;
+  z-index: 10;
+  display: none;
+} */
+
+.wrapper li {
+   position: relative;
+    display: inline-block;
+    padding: 8px 10px;
+    color: 55558;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  /* .wrapper li > a::after{
+    position: absolute;
+    content: "";
+    background-image: url(assets/img/right-arrow.svg);
+    background-position: center;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    top: 14px;
+    right: 10px;
+  } */
+
+  .wrapper .tabs-dropdown-wrap li.menu-item > span.toggle-submenu::after {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 900;
+    content: "\2b";
+    font-size: 24px;
+  }
+
+  .wrapper li .wrapper li > a.download::after{
+    position: absolute;
+    content: "";
+    background-image: url(assets/img/download.svg);
+    background-position: center;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    right: 10px;
+  }
+  .tabs-dropdown-title span {
+    color: #19191C;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .wrapper .tabs-dropdown-title:hover{
+    background: none !important;
+    cursor: inherit !important;
+  }
+  .card-body.tab-content {
+    padding: 0;
+  }
+  .menu-title span {
+    color: #19191C;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-left: 20px;
+  }
+  .tabs-dropdown-wrap li > .wrapper.test {
+      display: none;
+      width: 264px;
+      background: #fff;
+      border-radius: 0px 10px 10px 10px;
+      border: 1px solid #EDEDFD;
+      box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.05);
+      padding: 20px 0px 15px 20px;
+      height: 190px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      direction: rtl;
+      scrollbar-width: thin;
+      scrollbar-color: #FFA800 #f1f1f1;
+      transform: translateX(60px);
+  }
+  .wrapper.sub-wrap {
+    display: none;
+  }
+  .menu-item.menu-item-has-children.sub-active .wrapper.sub-wrap {
+    display: block;
+  }
+  li.menu-item.menu-item-has-children > .sub-wrap ul li:hover{
+    background: none !important;
+  }
+  .menu-item.menu-item-has-children.sub-active:hover {
+    background: none;
+  }
+  .wrapper.sub-wrap ul li a:hover{
+    background: #FFA800 !important;
+  }
+  .wrapper.sub-wrap {
+    display: none;
+    background: #EDEDFD;
+    border-radius: 10px;
+    padding: 13px;
+  }
+  .wrapper.sub-wrap ul li{
+    padding: 0px;
+  }
+  .menu-item-has-children .menu-title span {
+    margin-left: 10px;
+  }
+  .wrapper.sub-wrap ul {
+    overflow-y: scroll;
+    max-height: 320px;
+    direction: rtl; 
+    scrollbar-width: thin;
+    scrollbar-color: #FFA800 #f1f1f1;
+  }
+  .tabs-dropdown-wrap .menu-title {
+      position: absolute !important;
+      left: 0;
+      top: 0;
+      background: #ffff;
+      width: 100%;
+    }
+    .tabs-dropdown-wrap .menu-title {
+      position: absolute !important;
+      left: 0;
+      top: 0;
+      background: #fff;
+      width: 100%;
+      z-index: 999;
+    }
+    .tabs-dropdown-wrap .menu-title:hover{
+      background: none;
+    } 
+    .menu-sub-title span {
+      color: #19191C;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 150%;
+      margin-left: 5px;
+      margin-bottom: 10px;
+      display: block;
+  }
+       span.svg-wrapper.download-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+}
+
+
+
+
+        /* Section Breakpoints */
+        @media (min-width: 992px) and (max-width: 1200px) {
+          .multitab-right-section h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+          }
+
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+          .multitab-right-section h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+          }
+
+        }
+
+        @media (max-width: 767px) {
+          .multitab-right-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+          }
+          .row.multitab-bg {
+            padding: 25px 0px 25px 0px;
+          }
+          .multitab-right-section h4 {
+            font-size: 18px;
+          }
+          .multitab-wrap .multi-main-tabs ul {
+            gap: 30px;
+          }
+          .multitab-right-section {
+            padding: 30px 15px 30px 15px;
+          }
+          .multitab-wrap .card {
+            margin-top: 0px !important;
+          }
+          .tabs-wrap .tabs-menu ul li a.nav-link {
+            font-size: 16px;
+            line-height: 28px;
+          }
+          .tabs-dropdown-title span {
+            font-size: 18px;
+            margin-bottom: 5px;
+          }
+          .wrapper li a {
+            padding: 8px 10px;
+            font-size: 14px;
+          }
+          .wrapper li {
+            padding: 10px 10px 10px 10px;
+            font-size: 14px;
+          }
+          .menu-item-has-children .menu-title span {
+            margin-bottom: 5px;
+            display: block;
+          }
+           
+        }
+
+
+
+
+
+     </style>
+<!-- Section Start -->
+<div class="multitab-sections" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    <div class="container">
+        <div class="row multitab-bg" style="background-image: url('{{ section.settings.bg_image | img_url: 'master' }}');">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="multitab-right-section">
+                    <h2>{{ section.settings.heading_text }}</h2>
+                    <h4>{{ section.settings.sub_heading_text }}</h4>
+                    <div class="multitab-wrap">
+                        <div class="tabs-wrap">
+                            <div class="multi-main-tabs">
+                                <ul class="nav nav-tabs card-header-tabs" id="outerTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#tab-1" aria-controls="tab-1" role="tab" aria-expanded="true">
+                                            <span class="svg-wrapper">
+                                                {{- 'bullet-point.svg' | inline_asset_content -}}
+                                            </span>
+                                             {{ section.settings.tab_menu_1}}
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#tab-2" aria-controls="tab-2" role="tab">
+                                            <span class="svg-wrapper">
+                                                {{- 'bullet-point.svg' | inline_asset_content -}}
+                                            </span>
+                                             {{ section.settings.tab_menu_2}}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tabs-body tab-content">
+
+                                <!-- Manual Tab -->
+                                <div class="tab-pane active" id="tab-1" role="tabpanel">
+                                    <!-- Nested Tab-1 -->
+                                    <div class="card mt-3">
+                                        <div class="tabs-menu">
+                                            <h4>{{ section.settings.Select_Language}}</h4>
+                                            <ul class="nav nav-tabs card-header-tabs" id="innerTab1" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-bs-toggle="tab" href="#tab-1-1" aria-controls="tab-1-1" role="tab" aria-expanded="true">{{ section.settings.Select_language_1 }}</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#tab-1-2" aria-controls="tab-1-2" role="tab">{{ section.settings.Select_language_2 }}</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="card-body tab-content">
+                                            <!-- English Tab -->
+                                            <div class="tab-pane active" id="tab-1-1" role="tabpanel">
+                                                <div class="wrapper">
+                                                    <ul class="tabs-dropdown-wrap">
+                                                        {% for block in section.blocks %}
+                                                            {% assign collection = collections[block.settings.category] %}
+                                                            {% if block.type == "category_menu" %}
+                                                                {% if collection and collection.products.size > 0 %}
+                                                                    <li class="menu-title">
+                                                                        <span class="">{{ section.settings.Select_Category }}</span>
+                                                                    </li>
+                                                                    <li class="menu-item menu-item-has-children">
+                                                                        <span class="toggle-submenu">{{ collection.title }}</span>
+                                                                        <div class="wrapper sub-wrap">
+                                                                            <div class="menu-sub-title">
+                                                                                <span class="">{{ collection.title }}</span>
+                                                                            </div>
+                                                                            <ul>
+                                                                                {% for product in collection.products %}
+                                                                                    {% if product.metafields.custom.download_file != blank %}
+                                                                                        <li>
+                                                                                            <a class="download" href="{{ product.metafields.custom.download_file | file_url }}" target="_blank">
+                                                                                                {{ product.title }}
+                                                                                                <span class="svg-wrapper download-wrapper">
+                                                                                                    {{- 'download.svg' | inline_asset_content -}}
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    {% endif %}
+                                                                                {% endfor %}
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+                                                                {% else %}
+                                                                    <li>No products found in this collection.</li>
+                                                                {% endif %}
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <!-- Dutch Tab -->
+                                            <div class="tab-pane" id="tab-1-2" role="tabpanel">
+                                                <div class="wrapper">
+                                                    <ul class="tabs-dropdown-wrap">
+                                                        {% for block in section.blocks %}
+                                                            {% assign collection = collections[block.settings.category] %}
+                                                            {% if block.type == "dutch_category_menu" %}
+                                                                {% if collection and collection.products.size > 0 %}
+                                                                    <li class="menu-title">
+                                                                        <span class="">{{ section.settings.Select_Category }}</span>
+                                                                    </li>
+                                                                    <li class="menu-item menu-item-has-children">
+                                                                        <span class="toggle-submenu">{{ collection.title }}</span>
+                                                                        <div class="wrapper sub-wrap">
+                                                                            <div class="menu-sub-title">
+                                                                                <span class="">{{ collection.title }}</span>
+                                                                            </div>
+                                                                            <ul>
+                                                                               <!-- Check if the Collection-Level Download Link Exists -->
+                                                                              {% if collection.metafields.custom.collection_dutch_file != blank %}
+                                                                                  <li>
+                                                                                      <a class="download" href="{{ collection.metafields.custom.collection_dutch_file | file_url }}" target="_blank">
+                                                                                          {{ block.settings.heading_download }} {{ collection.title }}
+                                                                                          <span class="svg-wrapper download-wrapper">
+                                                                                              {{- 'download.svg' | inline_asset_content -}}
+                                                                                          </span>
+                                                                                      </a>
+                                                                                  </li>
+                                                                              {% else %}
+                                                                                  <!-- If No Collection-Level File, Show Product-Level Download Links -->
+                                                                                  {% for product in collection.products %}
+                                                                                      {% if product.metafields.custom.dutch_file != blank %}
+                                                                                          <li>
+                                                                                              <a class="download" href="{{ product.metafields.custom.dutch_file | file_url }}" target="_blank">
+                                                                                                  {{ product.title }}
+                                                                                                  <span class="svg-wrapper download-wrapper">
+                                                                                                      {{- 'download.svg' | inline_asset_content -}}
+                                                                                                  </span>
+                                                                                              </a>
+                                                                                          </li>
+                                                                                      {% else %}
+                                                                                          <li><span class="no-file">File not available for {{ product.title }}</span></li>
+                                                                                      {% endif %}
+                                                                                  {% endfor %}
+                                                                              {% endif %}
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+                                                                {% else %}
+                                                                    <li>No products found in this collection.</li>
+                                                                {% endif %}
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Nested Tab-1 -->
+                                </div>
+
+                                <!-- Driver Tab -->
+                                <div class="tab-pane" id="tab-2" role="tabpanel">
+                                    <!-- Nested Tab-2 -->
+                                    <div class="card mt-3">
+                                        <div class="tabs-menu">
+                                            <h4>{{ section.settings.Select_Operating_System}}</h4>
+                                            <ul class="nav nav-tabs card-header-tabs" id="innerTab1" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-bs-toggle="tab" href="#tab-2-1" aria-controls="tab-2-1" role="tab" aria-expanded="true">{{ section.settings.Select_Operating_System_1 }}</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#tab-2-2" aria-controls="tab-2-2" role="tab">{{ section.settings.Select_Operating_System_2 }}</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#tab-2-3" aria-controls="tab-2-3" role="tab">{{ section.settings.Select_Operating_System_3 }}</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="card-body tab-content">
+                                            <!-- Windows Tab -->
+                                            <div class="tab-pane active" id="tab-2-1" role="tabpanel">
+                                                 <div class="wrapper">
+                                                    <ul class="tabs-dropdown-wrap">
+                                                        {% for block in section.blocks %}
+                                                            {% assign collection = collections[block.settings.windows_category] %}
+                                                            {% if block.type == "driver_windows" %}
+                                                                {% if collection and collection.products.size > 0 %}
+                                                                    <li class="menu-title">
+                                                                        <span class="">{{ section.settings.Select_Category }}</span>
+                                                                    </li>
+                                                                    <li class="menu-item menu-item-has-children">
+                                                                        <span class="toggle-submenu">{{ collection.title }}</span>
+                                                                        <div class="wrapper sub-wrap">
+                                                                            <div class="menu-sub-title">
+                                                                                <span class="">{{ collection.title }}</span>
+                                                                            </div>
+                                                                            <ul>
+                                                                                {% for product in collection.products %}
+                                                                                 {% if product.metafields.custom.digital_downloads_url != blank %}
+                                                                                    <!-- Display the download link if the metafield is present -->
+                                                                                    <a class="download" href="{{ product.metafields.custom.digital_downloads_url }}" target="_blank">
+                                                                                      {{ product.title }}
+                                                                                        <span class="svg-wrapper download-wrapper">
+                                                                                            {{- 'download.svg' | inline_asset_content -}}
+                                                                                        </span>
+                                                                                    </a>
+                                                                                  {% endif %}
+                                                                                {% endfor %}
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+                                                                {% else %}
+                                                                    <li>No products found in this collection.</li>
+                                                                {% endif %}
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                           <!-- Mac Tab -->
+                                        <div class="tab-pane" id="tab-2-2" role="tabpanel">
+                                            <div class="wrapper">
+                                                <ul class="tabs-dropdown-wrap">
+                                                    {% for block in section.blocks %}
+                                                        {% assign collection = collections[block.settings.mac_category] %}
+                                                        {% if block.type == "driver_mac" %}
+                                                            {% if collection and collection.products.size > 0 %}
+                                                                <li class="menu-title">
+                                                                    <span class="">{{ section.settings.Select_Linux_Driver }}</span>
+                                                                </li>
+                                                                <li class="menu-item menu-item-has-children">
+                                                                    <span class="toggle-submenu">{{ collection.title }}</span>
+                                                                    <div class="wrapper sub-wrap">
+                                                                        <div class="menu-sub-title">
+                                                                            <span class="">{{ collection.title }}</span>
+                                                                        </div>
+                                                                        <ul>
+                                                                            {% for product in collection.products %}
+                                                                                {% if product.metafields.custom.mac_file != blank %}
+                                                                                    <li>
+                                                                                        <a class="download" href="{{ product.metafields.custom.mac_file | file_url }}" target="_blank">
+                                                                                            {{ product.title }}
+                                                                                            <span class="svg-wrapper download-wrapper">
+                                                                                                {{- 'download.svg' | inline_asset_content -}}
+                                                                                            </span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                {% endif %}
+                                                                            {% endfor %}
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            {% else %}
+                                                                <li>No products found in this collection.</li>
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                          
+                                           <!-- Linux Tab -->
+                                                <div class="tab-pane" id="tab-2-3" role="tabpanel">
+                                                    <div class="wrapper">
+                                                        <ul class="tabs-dropdown-wrap">
+                                                            {% for block in section.blocks %}
+                                                                {% assign collection = collections[block.settings.linux_category] %}
+                                                                {% if block.type == "driver_linux" %}
+                                                                    {% if collection and collection.products.size > 0 %}
+                                                                        <li class="menu-title">
+                                                                            <span class="">{{ section.settings.Select_Linux_Driver }}</span>
+                                                                        </li>
+                                                                        <li class="menu-item menu-item-has-children">
+                                                                            <span class="toggle-submenu">{{ collection.title }}</span>
+                                                                            <div class="wrapper sub-wrap">
+                                                                                <div class="menu-sub-title">
+                                                                                    <span class="">{{ collection.title }}</span>
+                                                                                </div>
+                                                                                <ul>
+                                                                                    {% for product in collection.products %}
+                                                                                        {% if product.metafields.custom.linux_file != blank %}
+                                                                                            <li>
+                                                                                                <a class="download" href="{{ product.metafields.custom.linux_file | file_url }}" target="_blank">
+                                                                                                    {{ product.title }}
+                                                                                                    <span class="svg-wrapper download-wrapper">
+                                                                                                        {{- 'download.svg' | inline_asset_content -}}
+                                                                                                    </span>
+                                                                                                </a>
+                                                                                            </li>
+                                                                                        {% endif %}
+                                                                                    {% endfor %}
+                                                                                </ul>
+                                                                            </div>
+                                                                        </li>
+                                                                    {% else %}
+                                                                        <li>No products found in this collection.</li>
+                                                                    {% endif %}
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                         </div>
+                                    </div>
+                                    <!-- End Nested Tab-2 -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Section End -->
+
+
+
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $('.wrapper li.menu-item-has-children .toggle-submenu').on('click', function(e) {
+                e.preventDefault();
+                $(this).siblings('.sub-wrap').slideToggle();
+                $(this).parent().toggleClass('sub-active'); 
+            });
+
+        });
+    </script>
+
+                                  
+{% schema %}
+{
+  "name": "Manual Download Driver",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Section Heading",
+      "default": "Download Center"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading_text",
+      "label": "Subheading",
+      "default": "Find your downloads"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_menu_1",
+      "label": "Tab Menu",
+      "default": "Manual"
+    },
+    {
+      "type": "text",
+      "id": "tab_menu_2",
+      "label": "Tab Menu",
+      "default": "Driver"
+    },
+    {
+      "type": "text",
+      "id": "Select_Category",
+      "label": "Select Category Label",
+      "default": "Select Category"
+    },
+    {
+      "type": "text",
+      "id": "Select_Language",
+      "label": "Select Language Label",
+      "default": "Select Language"
+    },
+    {
+      "type": "text",
+      "id": "Select_Operating_System",
+      "label": "Select Operating System",
+      "default": "Select Operating System"
+    },
+    {
+      "type": "text",
+      "id": "Select_Operating_System_1",
+      "label": "Select Operating System",
+      "default": "Windows"
+    },
+    {
+      "type": "text",
+      "id": "Select_Operating_System_2",
+      "label": "Select Operating System",
+      "default": "Mac"
+    },
+    {
+      "type": "text",
+      "id": "Select_Operating_System_3",
+      "label": "Select Operating System",
+      "default": "Linux"
+    },
+    {
+      "type": "text",
+      "id": "Select_language_1",
+      "label": "Select language",
+      "default": "English"
+    },
+    {
+      "type": "text",
+      "id": "Select_language_2",
+      "label": "Select language",
+      "default": "Dutch"
+    },
+    {
+      "type": "text",
+      "id": "Select_Linux_Driver",
+      "label": "Select Linux Driver",
+      "default": "Select Linux Driver"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "default": 20,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_menu",
+      "name": "Manual Category Menu",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "category",
+          "label": "Collection for Manual Tab"
+        }
+      ]
+    },
+    {
+      "type": "dutch_category_menu",
+      "name": "Dutch Category Menu",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "category",
+          "label": "Collection for Dutch Tab"
+        },
+        {
+          "type": "text",
+          "id": "heading_download",
+          "label": "Download All file"
+        }
+        
+      ]
+    },
+    {
+      "type": "driver_windows",
+      "name": "Driver for Windows",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "windows_category",
+          "label": "Collection for Windows Tab"
+        }
+      ]
+    },
+    {
+      "type": "driver_mac",
+      "name": "Driver for Mac",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "mac_category",
+          "label": "Collection for Mac Tab"
+        }
+      ]
+    },
+    {
+      "type": "driver_linux",
+      "name": "Driver for Linux",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "linux_category",
+          "label": "Collection for Linux Tab"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Manual Download Driver",
+      "category": "Downloads"
+    }
+  ]
+}
+{% endschema %}
